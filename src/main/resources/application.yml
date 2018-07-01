@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.112:3306/sell
+    username: root
+    password: 123456
+
+  jpa:
+    show-sql: true
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  #springboot2.X 模板下，不加这句则默认为myisam引擎
+server:
+  context-path: /sell
+#logging:
+#  pattern:
+#    console: "%d -- %msg%n"
+##  path: /var/log/tomcat  #path 和file 属性配置一个就行
+#  file: /var/log/tomcat/sell.log
+#  level:
+#    com.imooc.LoggerTest : debug
