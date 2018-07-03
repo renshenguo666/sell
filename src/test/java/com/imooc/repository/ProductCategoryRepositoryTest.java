@@ -11,6 +11,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
@@ -41,6 +44,12 @@ public class ProductCategoryRepositoryTest {
 //        pc.setCategoryName("女生最爱");
         pc.setCategoryType(3);
         repository.save(pc);
+    }
+    @Test
+    public void findByCategoryTypeInTest(){
+        List<Integer> ctgyType = Arrays.asList(2,3);
+        List<ProductCategory> pcArry = repository.findByCategoryTypeIn(ctgyType);
+        Assert.assertNotEquals(0,pcArry.size());
     }
 
 
