@@ -15,12 +15,17 @@ public class LoggerTest {
 //    private static final Logger LOGGER = LoggerFactory.getLogger(LoggerTest.class);
 
     @Test
-    public void testLoger(){
+    public void testLoger() throws Exception{
         String name = "jack";
         String password = "123456";
         log.debug("debug...");
         log.info("name:{};password:{}",name,password);
         log.warn("warn...");
         log.error("error...");
+
+        String str = "hello";
+        byte[] bytes = str.getBytes("utf-8");
+        log.info(bytes.toString());
+
     }
 }
