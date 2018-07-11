@@ -11,15 +11,20 @@ import java.math.BigDecimal;
 @Data
 public class ProductInfoVO {
 
-    private String id;
+    @JsonProperty("id")
+    private String productId;
+
     @JsonProperty(value = "name")
-    private String productInfoName;
+    private String productName;
 
-    private BigDecimal price;
+    @JsonProperty(value = "price")
+    private BigDecimal productPrice;
 
-    private String description;
+    @JsonProperty(value = "description")
+    private String productDescription;
 
-    private String icon;
+    @JsonProperty(value = "icon")
+    private String productIcon;
 
 
 }
