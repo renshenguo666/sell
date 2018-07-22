@@ -22,7 +22,7 @@ public class OrderDetail {
     private String productId;
     /**商品名称*/
     private String productName;
-    /**商品价格*/
+    /**商品价格 ：一定不能由前端传过来，应该自己从数据库中查出来*/
     private BigDecimal productPrice;
     /**商品数量*/
     private Integer productQuantity;
