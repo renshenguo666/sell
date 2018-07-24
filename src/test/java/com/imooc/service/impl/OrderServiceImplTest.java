@@ -3,6 +3,7 @@ package com.imooc.service.impl;
 import com.imooc.dataobject.OrderDetail;
 import com.imooc.dto.OrderDTO;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class OrderServiceImplTest {
     @Autowired
     private  OrderServiceImpl orderServiceImpl;
     private final String BUYYER_OPENID = "110110";
+    private final String ORDERID = "1532254172071965951";
 
     @Test
     public void create() {
@@ -32,7 +34,7 @@ public class OrderServiceImplTest {
         List<OrderDetail> orderDetailList = new ArrayList<>();
         OrderDetail orderDetail = new OrderDetail();
         orderDetail.setProductId("123459");
-        orderDetail.setProductQuantity(2);
+        orderDetail.setProductQuantity(222);
         OrderDetail orderDetail2 = new OrderDetail();
         orderDetail2.setProductId("123456");
         orderDetail2.setProductQuantity(2);
@@ -48,6 +50,9 @@ public class OrderServiceImplTest {
 
     @Test
     public void findOne() {
+        OrderDTO result = orderServiceImpl.findOne(ORDERID);
+        log.info("查询一个订单,result={}",result);
+        Assert.assertEquals(ORDERID,result.getOrderId());
     }
 
     @Test
