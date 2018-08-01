@@ -26,9 +26,9 @@ public class OrderForm {
     @NotEmpty(message = "买家openid必填")
     private String openid;
     /**
-     * 买家购物车
+     * 购物车
      */
-    @NotEmpty(message = "买家购物车不能为空")
+    @NotEmpty(message = "购物车不能为空")
     private String items;
 
 }
