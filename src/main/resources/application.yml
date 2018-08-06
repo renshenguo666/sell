@@ -4,9 +4,10 @@ spring:
     url: jdbc:mysql://192.168.234.128:3306/sell?characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
-
   jpa:
     show-sql: true
+  jackson:
+    default-property-inclusion: non_null    #将对象转换为json时，属性值为null的，不转换。
 #    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  #springboot2.X 模板下，不加这句则默认为myisam引擎
 server:
   context-path: /sell

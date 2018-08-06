@@ -61,5 +61,24 @@ public class LoggerTest {
      log.info("^^^^^^^^^^^end");
     }
 
+    @Test
+    public void testAlgorithms(){
+        int i = 1;
+//        int j = 1;
+        int a = i++ + 2;
+        int b = ++i + 2;
+        log.info("a:"+a+"---b:"+b);
+    }
+    @Test
+    public void testArray(){
+        double[] a;
+        a = new double[3];
+        for(int i =0 ;i< a.length;i++){
+//            a[i] = 0.0;
+            log.info(a[i]+"");
+        }
+        log.info("数组a:"+a.toString());
+    }
+
 
 }
